@@ -1,0 +1,1705 @@
+ERROR - 2024-10-18 15:57:15 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'testmuna' in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'testmuna', 3306, '', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'testmuna' in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-10-18 15:57:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	CONSTRAINT `pk_test` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SET = u...' at line 3 in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Database\Migrations\2024-10-18-155453_CreateNameTable.php(25): CodeIgniter\Database\Forge->createTable('test')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateNameTable->up()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-10-18 16:31:22 --> mysqli_sql_exception: Column 'name' cannot be null in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(20): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 16:31:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+[Method: POST, Route: store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:31:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:31:22 --> [Caused by] mysqli_sql_exception: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 16:31:30 --> mysqli_sql_exception: Column 'name' cannot be null in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(20): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 16:31:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+[Method: POST, Route: store]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:31:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:31:30 --> [Caused by] mysqli_sql_exception: Column 'name' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(20): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:32:08 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "success_view.php"
+[Method: POST, Route: store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('success_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('success_view', [], true)
+ 3 APPPATH\Controllers\FormController.php(22): view('success_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:32:57 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "success_view.php"
+[Method: POST, Route: store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('success_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('success_view', [], true)
+ 3 APPPATH\Controllers\FormController.php(22): view('success_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:34:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "success_view.php"
+[Method: POST, Route: store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('success_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('success_view', [], true)
+ 3 APPPATH\Controllers\FormController.php(16): view('success_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:35:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "success_view.php"
+[Method: POST, Route: store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('success_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('success_view', [], true)
+ 3 APPPATH\Controllers\FormController.php(25): view('success_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:37:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "success_view.php"
+[Method: POST, Route: store]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('success_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('success_view', [], true)
+ 3 APPPATH\Controllers\FormController.php(23): view('success_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:45:10 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:47:38 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:47:59 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:48:00 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:48:49 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:48:50 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:48:53 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/2]
+in APPPATH\Controllers\FormController.php on line 30.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:49:48 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/2]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:51:10 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/2]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:51:12 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:52:17 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:52:17 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:52:18 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:52:18 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:52:48 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/3]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:54:30 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/3]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:54:31 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/3]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 16:57:56 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:03:22 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:03:24 --> ArgumentCountError: Too few arguments to function App\Controllers\FormController::get(), 0 passed in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: get-store/1]
+in APPPATH\Controllers\FormController.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->get()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:16:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(1) NOT NULL,
+	CONSTRAINT `pk_users` PRIMARY KEY(`id`)
+) DEFAULT CHARACTER SE...' at line 14 in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Database\Migrations\2024-10-18-170851_CreateUsersTable.php(82): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsersTable->up()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-10-18 17:17:37 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Database\Migrations\2024-10-18-170851_CreateUsersTable.php(81): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsersTable->up()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-10-18 17:18:11 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Database\Migrations\2024-10-18-170851_CreateUsersTable.php(81): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsersTable->up()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-10-18 17:18:48 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Database\Migrations\2024-10-18-170851_CreateUsersTable.php(82): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsersTable->up()
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-10-18 17:52:05 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: test]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\FormController.php(12): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:52:38 --> mysqli_sql_exception: Table 'thrift_store.test' doesn't exist in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(22): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 17:52:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+[Method: POST, Route: test]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(22): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:52:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(22): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:52:38 --> [Caused by] mysqli_sql_exception: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(22): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:53:49 --> mysqli_sql_exception: Table 'thrift_store.test' doesn't exist in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 17:53:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+[Method: POST, Route: test]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:53:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:53:49 --> [Caused by] mysqli_sql_exception: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:54:10 --> mysqli_sql_exception: Table 'thrift_store.test' doesn't exist in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 17:54:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+[Method: POST, Route: test]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:54:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:54:10 --> [Caused by] mysqli_sql_exception: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:54:19 --> mysqli_sql_exception: Table 'thrift_store.test' doesn't exist in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 17:54:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+[Method: POST, Route: test]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:54:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:54:19 --> [Caused by] mysqli_sql_exception: Table 'thrift_store.test' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `test` (`name`) VALUES (\'Reuvin\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `test` (`name`) VALUES (:name:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 17:56:26 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: test]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\FormController.php(13): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 17:56:34 --> Failed to save data: {"name":"The name field is required."}
+ERROR - 2024-10-18 18:11:28 --> mysqli_sql_exception: Column 'email' cannot be null in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\EmployeeController.php(47): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\EmployeeController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 18:11:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+[Method: POST, Route: employees]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (:employee_id:, :password:, :department:, :age:, :gender:, :email:, :address:, :contact_number:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\EmployeeController.php(47): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:11:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (NULL, \'$2y$10$mcZCHSOUJe9iU6qEi6jq1eWmh1j1CM8/jalUv7JJbpDeeOwT4OSY2\', NULL, NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (NULL, \'$2y$10$mcZCHSOUJe9iU6qEi6jq1eWmh1j1CM8/jalUv7JJbpDeeOwT4OSY2\', NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (:employee_id:, :password:, :department:, :age:, :gender:, :email:, :address:, :contact_number:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\EmployeeController.php(47): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:11:28 --> [Caused by] mysqli_sql_exception: Column 'email' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (NULL, \'$2y$10$mcZCHSOUJe9iU6qEi6jq1eWmh1j1CM8/jalUv7JJbpDeeOwT4OSY2\', NULL, NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (NULL, \'$2y$10$mcZCHSOUJe9iU6qEi6jq1eWmh1j1CM8/jalUv7JJbpDeeOwT4OSY2\', NULL, NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (NULL, \'$2y$10$mcZCHSOUJe9iU6qEi6jq1eWmh1j1CM8/jalUv7JJbpDeeOwT4OSY2\', NULL, NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `employees` (`employee_id`, `password`, `department`, `age`, `gender`, `email`, `address`, `contact_number`) VALUES (:employee_id:, :password:, :department:, :age:, :gender:, :email:, :address:, :contact_number:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\EmployeeController.php(47): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 18:25:25 --> mysqli_sql_exception: Column 'username' cannot be null in C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\app\Controllers\FormController.php(38): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(933): App\Controllers\FormController->store()
+#10 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+#11 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\reuvi\Desktop\ThriftStore\codeigniter4-framework-2849e7f\system\rewrite.php(44): require_once('C:\\Users\\reuvi\\...')
+#16 {main}
+CRITICAL - 2024-10-18 18:25:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: buyers]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (:username:, :password:, :department:, :age:, :contact_number:, :gender:, :email:, :address:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\FormController.php(38): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:25:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (NULL, \'$2y$10$MQY5YO90RSQBq4v4s/YASOmHjxDvAdz47VG3QC8BNdok0n8agZuHi\', NULL, NULL, NULL, NULL, \'jlksadjlksa@gmail.com\', \'ajslkdjsalkd\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (NULL, \'$2y$10$MQY5YO90RSQBq4v4s/YASOmHjxDvAdz47VG3QC8BNdok0n8agZuHi\', NULL, NULL, NULL, NULL, \'jlksadjlksa@gmail.com\', \'ajslkdjsalkd\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (:username:, :password:, :department:, :age:, :contact_number:, :gender:, :email:, :address:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\FormController.php(38): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:25:25 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (NULL, \'$2y$10$MQY5YO90RSQBq4v4s/YASOmHjxDvAdz47VG3QC8BNdok0n8agZuHi\', NULL, NULL, NULL, NULL, \'jlksadjlksa@gmail.com\', \'ajslkdjsalkd\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (NULL, \'$2y$10$MQY5YO90RSQBq4v4s/YASOmHjxDvAdz47VG3QC8BNdok0n8agZuHi\', NULL, NULL, NULL, NULL, \'jlksadjlksa@gmail.com\', \'ajslkdjsalkd\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (NULL, \'$2y$10$MQY5YO90RSQBq4v4s/YASOmHjxDvAdz47VG3QC8BNdok0n8agZuHi\', NULL, NULL, NULL, NULL, \'jlksadjlksa@gmail.com\', \'ajslkdjsalkd\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `department`, `age`, `contact_number`, `gender`, `email`, `address`) VALUES (:username:, :password:, :department:, :age:, :contact_number:, :gender:, :email:, :address:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\FormController.php(38): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\FormController->store()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FormController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:33:28 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:34:18 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:35:32 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:35:34 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:36:25 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:36:27 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:00 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:06 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:13 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:14 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:14 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:37:15 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:52:42 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: PUT, Route: buyers/2]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\BuyersController.php(77): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BuyersController->put('2')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyersController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:52:44 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: PUT, Route: buyers/2]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\BuyersController.php(77): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BuyersController->put('2')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuyersController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:54:10 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:55:25 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:56:07 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers.php on line 99.
+ 1 APPPATH\Views\buyers.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:57:08 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:57:19 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:58:34 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:58:35 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:58:35 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:58:36 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:58:36 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: buyers-view]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:59:08 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: /]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 18:59:08 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: /]
+in APPPATH\Views\buyers-view.php on line 99.
+ 1 APPPATH\Views\buyers-view.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\buyers-view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('buyers-view', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('buyers-view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->buyers()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:07:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(36): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:08:32 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-view]
+in APPPATH\Views\employees.php on line 41.
+ 1 APPPATH\Views\employees.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('employees')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->employees()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:08:33 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-view]
+in APPPATH\Views\employees.php on line 41.
+ 1 APPPATH\Views\employees.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\Home.php(14): view('employees')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->employees()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:13:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(35): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:16:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(24): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:17:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(24): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:17:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(24): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 20:17:37 --> Error fetching employees: Invalid file: "employee_view.php"
+CRITICAL - 2024-10-18 20:17:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(25): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 20:17:38 --> Error fetching employees: Invalid file: "employee_view.php"
+CRITICAL - 2024-10-18 20:17:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(25): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:17:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(31): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:17:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(31): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:17:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee_view.php"
+[Method: GET, Route: employees-data]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_view', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(31): view('employee_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:22:43 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:22:45 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:22:45 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:24:02 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:24:03 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:24:18 --> ErrorException: Undefined variable $pager
+[Method: GET, Route: employees-data]
+in APPPATH\Views\employees.php on line 23.
+ 1 APPPATH\Views\employees.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pager', 'C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php', 23)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\app\\Views\\employees.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(19): view('employees', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+ERROR - 2024-10-18 20:24:35 --> Undefined variable $pager
+ERROR - 2024-10-18 20:40:20 --> Invalid file: "employees-view.php"
+CRITICAL - 2024-10-18 20:43:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employees/index.php"
+[Method: GET, Route: employees-view]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employees/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees/index', [], true)
+ 3 APPPATH\Controllers\Home.php(14): view('employees/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->employees()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 20:43:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employees/index.php"
+[Method: GET, Route: employees-view]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employees/index.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employees/index', [], true)
+ 3 APPPATH\Controllers\Home.php(14): view('employees/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->employees()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 21:28:12 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: employees/update/3]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\EmployeeController.php(79): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->update('3')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 21:28:49 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: employees/update/3]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\EmployeeController.php(79): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->update('3')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 21:32:07 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: employees/update/5]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\EmployeeController.php(81): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->update('5')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 22:32:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "grant-access.php"
+[Method: GET, Route: grant_access]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('grant-access.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('grant-access', [], true)
+ 3 APPPATH\Controllers\Home.php(29): view('grant-access')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->grantAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 22:32:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "grantAccess.php"
+[Method: GET, Route: grantAccess]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('grantAccess.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('grantAccess', [], true)
+ 3 APPPATH\Controllers\Home.php(29): view('grantAccess')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->grantAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
+CRITICAL - 2024-10-18 22:33:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "grantAccess.php"
+[Method: GET, Route: grantAccess]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('grantAccess.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('grantAccess', [], true)
+ 3 APPPATH\Controllers\Home.php(29): view('grantAccess')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->grantAccess()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\reuvi\\Desktop\\ThriftStore\\codeigniter4-framework-2849e7f\\public\\index.php')
